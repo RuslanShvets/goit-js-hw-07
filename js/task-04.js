@@ -1,0 +1,12 @@
+const incrementButton = document.querySelector('[data-action="increment"]');
+const decrementButton = document.querySelector('[data-action="decrement"]');
+const counter = document.querySelector('#value');
+let counterNumber = 0;
+let addOne = () =>{counterNumber +=1;
+counter.textContent = counterNumber;
+};
+let minusOne =() =>{counterNumber -=1;
+    counter.textContent = counterNumber;
+};
+incrementButton.addEventListener("click", addOne);
+decrementButton.addEventListener("click", minusOne) ;
