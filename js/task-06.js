@@ -1,9 +1,8 @@
 let inputVal = document.getElementById("validation-input");
-
 let totalLenght = inputVal.getAttribute("data-length");
-let intTotallenght = parseInt(totalLenght, 10);
 
-inputVal.oninput = function() {
+let intTotallenght = parseInt(totalLenght, 10);
+const inputValoninput = function() {
   if (inputVal.value.length === intTotallenght) {
     inputVal.classList.remove("invalid");
     inputVal.classList.add("valid");
@@ -16,3 +15,4 @@ inputVal.oninput = function() {
     inputVal.classList.add("invalid");
   }
 };
+inputVal.addEventListener("blur", inputValoninput);

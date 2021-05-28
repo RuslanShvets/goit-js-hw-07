@@ -1,10 +1,10 @@
-const input = document.getElementById("name-input");
-const Output = document.getElementById("name-output");
-
+let input = document.getElementById("name-input");
+let Output = document.getElementById("name-output");
 input.oninput = function () {
-    if (input.value === '') {                  
+    if (input.value.trim() === '') {                  
        Output.innerHTML = 'незнайомець';     
     } else{                                    
-    Output.innerHTML = input.value;          
+    Output.innerHTML = input.value.trim();          
     }
+
 }
